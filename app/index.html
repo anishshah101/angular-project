@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -22,9 +23,9 @@
     <link href="favicon.ico" rel="shortcut icon" />
 
 </head>
-<body>
-    <div id="page">
-        <header class="container">
+<body class='container'>
+    <div id="page" class='container'>
+        <header >
             <div class="navbar navbar-default" id="menu">
                 <div class="navbar-header">
                     <button class="btn btn-success navbar-toggle"></button>
@@ -45,6 +46,8 @@
                 </div>
             </div>
         </header>
+        <div data-ng-view="">
+        </div>  
         <section class="container" id="body">
             <div></div>
         </section>
@@ -61,7 +64,11 @@
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
+  <!--<script src="app.js"></script>-->
+  <script type="text/javascript" src="app.js"></script>
+
+<!-- Load controllers -->
+  <script type="text/javascript" src="controllers/discussionController.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
@@ -70,6 +77,9 @@
   
 </body>
 </html>
+
+
+
 <!--<script type="text/javascript" src="content/js/angular.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script> -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script> 
@@ -78,3 +88,4 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
 <script type="text/javascript" src="content/js/toaster.js"></script>
 <script type="text/javascript" src="conent/js/loading-bar.min.js"></script>
+

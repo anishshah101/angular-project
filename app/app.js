@@ -12,12 +12,12 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]); */
 
-var app = angular.module('FoursquareApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
+var app = angular.module('myApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
 app.config(function ($routeProvider) {
  
     $routeProvider.when("/explore", {
-        controller: "placesExplorerController",
-        templateUrl: "/app/views/placesresults.html"
+        controller: "discussionController",
+        templateUrl: "/app/views/discussion.html"
     });
     $routeProvider.otherwise({ redirectTo: "/explore" });
  
