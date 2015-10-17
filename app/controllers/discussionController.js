@@ -1,3 +1,3 @@
 app.controller('discussionController', function ($scope) {
-    $scope.discussion = "New York";
+    $scope.discussion = "Discussion";
 });

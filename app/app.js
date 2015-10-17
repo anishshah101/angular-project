@@ -15,10 +15,31 @@ config(['$routeProvider', function($routeProvider) {
 var app = angular.module('myApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
 app.config(function ($routeProvider) {
  
-    $routeProvider.when("/explore", {
+    $routeProvider
+    .when("/explore", {
         controller: "discussionController",
         templateUrl: "/app/views/discussion.html"
-    });
-    $routeProvider.otherwise({ redirectTo: "/explore" });
+    })
+    .when("/UseCases", {
+        controller: "UseCasesController",
+        templateUrl: "/app/views/UseCases.html"
+    })
+    .when("/Team", {
+        controller: "TeamController",
+        templateUrl: "/app/views/Team.html"
+    })
+    .when("/Issues", {
+        controller: "IssuesController",
+        templateUrl: "/app/views/Issues.html"
+    })
+    .when("/Timeline", {
+        controller: "TimelineController",
+        templateUrl: "/app/views/Timeline.html"
+    })
+    .when("/Wireframes", {
+        controller: "WireframesController",
+        templateUrl: "/app/views/Wireframes.html"
+    })
+    .otherwise({ redirectTo: "/explore" });
  
 });
