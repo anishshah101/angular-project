@@ -1,9 +1,20 @@
-<div>
-    <div>
-        <input type="text" data-ng-model="Team" />
+<div class="main">
+  <div class="container">
+
+    <h3 class='inputcenter'> Team Members </h3>
+    <br>
+    <div class="row">
+      <div class="item col-md-4" ng-repeat="photo in photos">
+        <a href="#/photos/{{$index}}">
+          <img class="img-responsive" ng-src="{{ photo.url }}">
+          <div class='inputcenter'>
+	          <p class="author"> {{ photo.author }}</p>
+	          <p class='skills'> Skills: {{ photo.skills }}</p>
+      	  </div>
+        </a>
+      </div>
     </div>
-    <div>
-        <h5>Places found Near by ({{Team}})</h5>
-    </div>
+
+  </div>
 </div>
 

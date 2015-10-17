@@ -35,7 +35,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#/explore">Discussion</a></li>
+                        <li><a href="#/discussion">Discussion</a></li>
                         <li><a href="#/UseCases">Use Cases</a></li>
                         <li><a href="#/Team">Team</a></li>
                         <li><a href="#/Issues">Issues</a></li>
@@ -48,9 +48,7 @@
         </header>
         <div data-ng-view="">
         </div>  
-        <section class="container" id="body">
-            <div></div>
-        </section>
+        
  
         <hr />
  
@@ -74,6 +72,10 @@
   <script type="text/javascript" src="controllers/IssuesController.js"></script>
   <script type="text/javascript" src="controllers/TimelineController.js"></script>
   <script type="text/javascript" src="controllers/WireframesController.js"></script>
+  <script type="text/javascript" src="controllers/PhotoController.js"></script>
+
+  <!-- Services -->
+  <script src="services/photos.js"></script>
   
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>

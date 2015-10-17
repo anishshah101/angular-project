@@ -16,7 +16,7 @@ var app = angular.module('myApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
 app.config(function ($routeProvider) {
  
     $routeProvider
-    .when("/explore", {
+    .when("/discussion", {
         controller: "discussionController",
         templateUrl: "/app/views/discussion.html"
     })
@@ -40,6 +40,10 @@ app.config(function ($routeProvider) {
         controller: "WireframesController",
         templateUrl: "/app/views/Wireframes.html"
     })
-    .otherwise({ redirectTo: "/explore" });
+    .when('/photos/:id', {
+      controller: 'PhotoController',
+      templateUrl: 'views/photo.html'
+    })
+    .otherwise({ redirectTo: "/discussion" });
  
 });
